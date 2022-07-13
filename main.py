@@ -12,9 +12,6 @@ Bootstrap(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lists.db'
 db = SQLAlchemy(app)
 
-db.create_all()
-db.session.commit()
-
 
 class ToDoList(db.Model):
     __tablename__ = 'to_do_lists'
